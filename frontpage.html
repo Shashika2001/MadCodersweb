@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+sliding images
+</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="slider()">
+    <div class="banneer">
+        <div class="slider">
+            <img src="https://wallpapercave.com/wp/wp6287137.jpg" id="slideimg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://cdn-icons-png.freepik.com/256/9413/9413819.png?ga=GA1.1.1839527051.1707588431">
+                    
+
+                </div>
+            </div>
+            <div class="content">
+                <h1>
+                    MadCoders are here!
+                </h1>
+                <h3>
+                    This is a official web page for MadCoder's team.
+                </h3>
+                <div>
+                    <button type="button" onclick="location.href='https://chat.whatsapp.com/GB8aELnBh7TBIMO7I6eT5y'" >Whatsapp Group</button>
+                    <button type="button" class="btn-2" onclick="location.href='https://www.facebook.com/shashika.ekanayake.98?mibextid=ZbWKwL'">My Fb Profile</button>
+
+                </div>
+            </div>
+            
+        
+        </div>
+
+    </div>
+
+<script>
+    var slideimg =document.getElementById("slideimg");
+
+    var images =new Array(
+        "https://th.bing.com/th/id/R.7e6980c76a3a36775271a59670f19c61?rik=ayfCJl5Wugr2sg&pid=ImgRaw&r=0",
+        "https://th.bing.com/th/id/OIP.E5SQ5VKm1b53-Zp_As9DLgHaF_?w=1600&h=1296&rs=1&pid=ImgDetMain",
+        "https://th.bing.com/th/id/OIP.gBMUWJtDQpX0OZPNiJYLHgHaD9?rs=1&pid=ImgDetMain"
+
+    );
+    var len =images.length;
+    var i=0;
+    function slider(){
+        if(i>len-1){
+            i=0;
+        }
+        slideimg.src=images[i];
+        i++;
+        setTimeout('slider()',3000);
+    }
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
